@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mode</title>
+        <meta charset = "UTF-8" />
+        <script src = "vue.js"></script>
+    </head>
+    <body>
+        <div id = "app" v-on:click = "handleClick" v-html = "text">{{text}}</div>
+        <div id = "div-h2">{{text2}}</div>
+        <script>
+            new Vue ( { el : "#app", data : { text : "hello" }, methods : { handleClick : function ( ) { this.text = "<h1>world<h1>"} } } )
+            new Vue ( { el : '#div-h2', data : { text2 : 'm' } } )
+        </script>
+    </body>
+</html>
