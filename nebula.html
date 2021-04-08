@@ -6,19 +6,22 @@
         <style>
             html,body{width: 100%;height: 100%;margin: 0;background-color: #fafafa;}
             p{text-align: center;margin: 0;}
-            .header,.footer{width: 100%;color: #fff;background-color: #333;}
+            .header,.footer{width: 100%;color: #fff;background-color: #555;}
             .header{height: 60px;line-height: 60px;}
             .article{height: 1800px;width: 1200px;margin: 30px auto;}
             .footer{height: 300px;line-height: 300px;}
-            .article-left,.article-right{float: left;background-color: #fff;}
-            .article-left{width: 300px;height: 1800px;margin-right: 30px;}
+            .article-left,.article-right{float: left;}
+            .article-left{width: 300px;height: 1800px;margin-right: 30px;color: #fff;}
             .article-right{width: 850px;height: 1800px;padding: 0px 10px;}
-            .article-right-top,.article-right-down{width: 100%;}
-            .article-right-top{height: 400px;margin-bottom: 10px;border-bottom: 1px solid #ddd;}
+            .article-right-top,.article-right-down{width: 100%;border-radius: 10px;background-color: #fff;}
+            .article-right-top{height: 400px;margin-bottom: 20px;}
             .article-right-down{height: 1390px;}
-            .list{padding: 0;list-style: none;}
-            .list-li{margin: 10px 0px;padding: 10px 30px;}
-            .list-li:hover{background-color: #afa;}
+            .list,.article-right-top,.article-right-down{box-shadow: 0px 1px 8px #888;}
+            .list{padding: 0;border-radius: 10px;list-style: none;}
+            .list-li{margin: 0;padding: 15px 30px;background-color: #555;}
+            .list-li:hover{width: 260px;margin-left: -10px;background-color: #afa;color: #555;box-shadow: 0px 1px 8px #888;}
+            #list-li-head{border-radius: 10px 10px 0px 0px;}
+            #list-li-end{border-radius: 0px 0px 10px 10px;}
         </style>
         <script src="vue.js"></script>
         <script src="nebulaJS.js"></script>
@@ -27,8 +30,8 @@
         <div class="header"><p id="title">{{massage}}</p></div>
         <div class="article">
             <div class="article-left">
-                <ul class="list">
-                    <li class="list-li">1</li>
+                <ul class="list" onclick="Click_deformation()">
+                    <li class="list-li" id="list-li-head">1</li>
                     <li class="list-li">2</li>
                     <li class="list-li">3</li>
                     <li class="list-li">4</li>
@@ -47,11 +50,11 @@
                     <li class="list-li">17</li>
                     <li class="list-li">18</li>
                     <li class="list-li">19</li>
-                    <li class="list-li">20</li>
+                    <li class="list-li" id="list-li-end">20</li>
                 </ul>
             </div>
             <div class="article-right">
-                <div class="article-right-top"></div>
+                <div class="article-right-top" id="id-article-right-top"></div>
                 <div class="article-right-down"></div>
             </div>
         </div>
