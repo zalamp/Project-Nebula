@@ -4,13 +4,18 @@
         <title>Mode</title>
         <meta charset = "UTF-8" />
         <script src = "vue.js"></script>
+        <style>
+            .bg{width: 300px;height: 300px;margin: 1px;background-color: #AAADB1;border: 1px solid #666;float: left;}
+        </style>
     </head>
     <body>
-        <div id = "app" v-on:click = "handleClick" v-html = "text">{{text}}</div>
-        <div id = "div-h2">{{text2}}</div>
-        <script>
-            new Vue ( { el : "#app", data : { text : "hello" }, methods : { handleClick : function ( ) { this.text = "<h1>world<h1>"} } } )
-            new Vue ( { el : '#div-h2', data : { text2 : 'm' } } )
-        </script>
+        <div class="bg"></div>
+        <div class="bg"></div>
+        <div class="bg"></div>
+        <div class="bg"></div>
+        <div class="bg"></div>
+        <div class="bg"></div>
+        <div class="bg"></div>
+        <div class="bg"></div>
     </body>
 </html>

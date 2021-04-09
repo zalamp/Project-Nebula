@@ -7,50 +7,67 @@
             html,body{width: 100%;height: 100%;margin: 0;background-color: #fafafa;}
             p{text-align: center;margin: 0;}
             .header,.footer{width: 100%;color: #fff;background-color: #555;}
-            .header{height: 60px;line-height: 60px;}
+            .header{height: 60px;margin-top: 10px;}
+            .header-left{width: 600px;}
+            .header-right{margin: 0px auto;line-height: 60px;}
             .article{height: 1800px;width: 1200px;margin: 30px auto;}
             .footer{height: 300px;line-height: 300px;}
-            .article-left,.article-right{float: left;}
+            .article-left,.article-right,.header-left,.header-right,.list-head-li{float: left;}
             .article-left{width: 300px;height: 1800px;margin-right: 30px;color: #fff;}
-            .article-right{width: 850px;height: 1800px;padding: 0px 10px;}
-            .article-right-top,.article-right-down{width: 100%;border-radius: 10px;background-color: #fff;}
+            .article-right{width: 850px;height: 1800px;}
+            .article-right-top,.article-right-down{border-radius: 10px;transition: ease 0.4s;background-color: #fff;}
             .article-right-top{height: 400px;margin-bottom: 20px;}
-            .article-right-down{height: 1390px;}
+            .article-right-down{height: 1380px;}
             .list,.article-right-top,.article-right-down{box-shadow: 0px 1px 8px #888;}
-            .list{padding: 0;border-radius: 10px;list-style: none;}
-            .list-li{margin: 0;padding: 15px 30px;background-color: #555;}
-            .list-li:hover{width: 260px;margin-left: -10px;background-color: #afa;color: #555;box-shadow: 0px 1px 8px #888;}
-            #list-li-head{border-radius: 10px 10px 0px 0px;}
-            #list-li-end{border-radius: 0px 0px 10px 10px;}
+            .list{margin: 0;padding: 0;border-radius: 10px;list-style: none;}
+            .list-head-li{margin: 0;padding: 0px 50px;line-height: 60px;display: inline-block;font-size: 30px;}
+            .list-article-li{margin: 0;padding: 15px 30px;background-color: #555;}
+            .list-article-li:hover{width: 260px;margin-left: -10px;background-color: #afa;color: #555;box-shadow: 0px 1px 8px #888;}
+            .list-head-li:hover{background-color: #aaf;color: #555;height: 70px;margin-top: -5px;box-shadow: 0px 1px 8px #888;}
+            #list-article-li-head{border-radius: 10px 10px 0px 0px;}
+            #list-article-li-end{border-radius: 0px 0px 10px 10px;}
+            #list-head{border-radius: 0;box-shadow: none;}
         </style>
         <script src="vue.js"></script>
         <script src="nebulaJS.js"></script>
     </head>
     <body>
-        <div class="header"><p id="title">{{massage}}</p></div>
+        <div class="header">
+            <div class="header-left">
+                <ul class="list" id="list-head">
+                    <li class="list-head-li" onclick="">1</li>
+                    <li class="list-head-li" onclick="">2</li>
+                    <li class="list-head-li" onclick="">3</li>
+                    <li class="list-head-li" onclick="">4</li>
+                </ul>
+            </div>
+            <div class="header-right">
+                <p id="title">{{massage}}</p>
+            </div>
+        </div>
         <div class="article">
             <div class="article-left">
                 <ul class="list" onclick="Click_deformation()">
-                    <li class="list-li" id="list-li-head">1</li>
-                    <li class="list-li">2</li>
-                    <li class="list-li">3</li>
-                    <li class="list-li">4</li>
-                    <li class="list-li">5</li>
-                    <li class="list-li">6</li>
-                    <li class="list-li">7</li>
-                    <li class="list-li">8</li>
-                    <li class="list-li">9</li>
-                    <li class="list-li">10</li>
-                    <li class="list-li">11</li>
-                    <li class="list-li">12</li>
-                    <li class="list-li">13</li>
-                    <li class="list-li">14</li>
-                    <li class="list-li">15</li>
-                    <li class="list-li">16</li>
-                    <li class="list-li">17</li>
-                    <li class="list-li">18</li>
-                    <li class="list-li">19</li>
-                    <li class="list-li" id="list-li-end">20</li>
+                    <li class="list-article-li" id="list-article-li-head">1</li>
+                    <li class="list-article-li">2</li>
+                    <li class="list-article-li">3</li>
+                    <li class="list-article-li">4</li>
+                    <li class="list-article-li">5</li>
+                    <li class="list-article-li">6</li>
+                    <li class="list-article-li">7</li>
+                    <li class="list-article-li">8</li>
+                    <li class="list-article-li">9</li>
+                    <li class="list-article-li">10</li>
+                    <li class="list-article-li">11</li>
+                    <li class="list-article-li">12</li>
+                    <li class="list-article-li">13</li>
+                    <li class="list-article-li">14</li>
+                    <li class="list-article-li">15</li>
+                    <li class="list-article-li">16</li>
+                    <li class="list-article-li">17</li>
+                    <li class="list-article-li">18</li>
+                    <li class="list-article-li">19</li>
+                    <li class="list-article-li" id="list-article-li-end">20</li>
                 </ul>
             </div>
             <div class="article-right">
