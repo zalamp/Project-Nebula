@@ -6,9 +6,10 @@
         <style>
             html,body{width: 100%;height: 100%;margin: 0;background-color: #fafafa;}
             p{text-align: center;margin: 0;}
+            a{color: #fff;text-decoration: none;}
             .header,.footer{width: 100%;color: #fff;background-color: #555;}
             .header{height: 60px;margin-top: 10px;}
-            .header-left{width: 600px;}
+            .header-left{width: 700px;}
             .header-right{margin: 0px auto;line-height: 60px;}
             .article{height: 1800px;width: 1200px;margin: 30px auto;}
             .footer{height: 300px;line-height: 300px;}
@@ -24,8 +25,8 @@
             .list-article-li{margin: 0;padding: 15px 30px;background-color: #555;}
             .list-article-li:hover{width: 260px;margin-left: -10px;background-color: #afa;color: #555;box-shadow: 0px 1px 8px #888;}
             .list-head-li:hover{background-color: #aaf;color: #555;height: 70px;margin-top: -5px;box-shadow: 0px 1px 8px #888;}
-            #list-article-li-head{border-radius: 10px 10px 0px 0px;}
-            #list-article-li-end{border-radius: 0px 0px 10px 10px;}
+            #list-article-li-search{border-radius: 10px 10px 0px 0px;}
+            #list-article-li-diet{border-radius: 0px 0px 10px 10px;}
             #list-head{border-radius: 0;box-shadow: none;}
         </style>
         <script src="vue.js"></script>
@@ -35,39 +36,39 @@
         <div class="header">
             <div class="header-left">
                 <ul class="list" id="list-head">
-                    <li class="list-head-li" onclick="">1</li>
-                    <li class="list-head-li" onclick="">2</li>
-                    <li class="list-head-li" onclick="">3</li>
-                    <li class="list-head-li" onclick="">4</li>
+                    <li class="list-head-li" id="list-article-li-user"><a href="">{{text}}</a></li>
+                    <li class="list-head-li" id="list-article-li-community"><a href="">{{text}}</a></li>
+                    <li class="list-head-li" id="list-article-li-gihub"><a href="">{{text}}</a></li>
+                    <li class="list-head-li" id="list-article-li-proposal"><a href="">{{text}}</a></li>
                 </ul>
             </div>
             <div class="header-right">
-                <p id="title">{{massage}}</p>
+                <p id="id-title-text">{{text}}</p>
             </div>
         </div>
         <div class="article">
             <div class="article-left">
                 <ul class="list" onclick="Click_deformation()">
-                    <li class="list-article-li" id="list-article-li-head">1</li>
-                    <li class="list-article-li">2</li>
-                    <li class="list-article-li">3</li>
-                    <li class="list-article-li">4</li>
-                    <li class="list-article-li">5</li>
-                    <li class="list-article-li">6</li>
-                    <li class="list-article-li">7</li>
-                    <li class="list-article-li">8</li>
-                    <li class="list-article-li">9</li>
-                    <li class="list-article-li">10</li>
-                    <li class="list-article-li">11</li>
-                    <li class="list-article-li">12</li>
-                    <li class="list-article-li">13</li>
-                    <li class="list-article-li">14</li>
-                    <li class="list-article-li">15</li>
-                    <li class="list-article-li">16</li>
-                    <li class="list-article-li">17</li>
-                    <li class="list-article-li">18</li>
-                    <li class="list-article-li">19</li>
-                    <li class="list-article-li" id="list-article-li-end">20</li>
+                    <li class="list-article-li" id="list-article-li-search">{{text}}</li>
+                    <li class="list-article-li" id="list-article-li-live">{{text}}</li>
+                    <li class="list-article-li" id="list-article-li-game">{{text}}</li>
+                    <li class="list-article-li" id="list-article-li-shopping">{{text}}</li>
+                    <li class="list-article-li" id="list-article-li-knowledge">{{text}}</li>
+                    <li class="list-article-li" id="list-article-li-travel">{{text}}</li>
+                    <li class="list-article-li" id="list-article-li-chat">{{text}}</li>
+                    <li class="list-article-li" id="list-article-li-work">{{text}}</li>
+                    <li class="list-article-li" id="list-article-li-video">{{text}}</li>
+                    <li class="list-article-li" id="list-article-li-music">{{text}}</li>
+                    <li class="list-article-li" id="list-article-li-app">{{text}}</li>
+                    <li class="list-article-li" id="list-article-li-news">{{text}}</li>
+                    <li class="list-article-li" id="list-article-li-home">{{text}}</li>
+                    <li class="list-article-li" id="list-article-li-Sports">{{text}}</li>
+                    <li class="list-article-li" id="list-article-li-car">{{text}}</li>
+                    <li class="list-article-li" id="list-article-li-healthy">{{text}}</li>
+                    <li class="list-article-li" id="list-article-li-book">{{text}}</li>
+                    <li class="list-article-li" id="list-article-li-finance">{{text}}</li>
+                    <li class="list-article-li" id="list-article-li-military">{{text}}</li>
+                    <li class="list-article-li" id="list-article-li-diet">{{text}}</li>
                 </ul>
             </div>
             <div class="article-right">
