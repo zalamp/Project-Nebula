@@ -1,7 +1,5 @@
 var element = {
-    name: 'id-article-right-top',
-    width: '200px',
-    heigth: '100px'
+    name: '#list-article-li-search'
 }
 window.onload = function(){
     main ( );
@@ -11,7 +9,7 @@ function main ( ) {
     text ( );
 }
 function text ( ) {
-    new Vue( { el: '#id-title-text', data: { text: 'Nebula' } } );
+    new Vue( { el: '#id-title-text', data: { text: '' } } );
     //标题
     new Vue( { el: '#list-article-li-user', data: { text: '用户' } } );
     new Vue( { el: '#list-article-li-community', data: { text: '社区' } } );
@@ -44,8 +42,7 @@ function Window_alert ( text ) {
 }
 function Click_deformation (  ) {
     var c_element = document.getElementById ( element.name );
-    c_element.style.width = element.width;
-    c_element.style.height = "100px";
+    c_element.style.display = "none";
 }
 function Element_deformation ( c_element ) {
 }
