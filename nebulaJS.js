@@ -40,9 +40,21 @@ function text ( ) {
 function Window_alert ( text ) {
     alert ( text );
 }
+var f = true;
+var rectangle_article_righttop = "width:100%;height:100px;background-color:#fff;";
 function Click_deformation (  ) {
     var c_element = document.getElementById ( element.name );
     c_element.style.display = "none";
 }
-function Element_deformation ( c_element ) {
+function Element_deformation ( c_element, c_width, c_height ) {
+    if(f){
+        document.getElementById("a-href").style="display:none;margin:50px;";
+        document.getElementById(c_element).style="width:"+c_width+"px;height:"+c_height+"px;background-color:#afa;";
+        f=false;
+    }
+    else{
+        document.getElementById("a-href").style="display:inline;";
+        document.getElementById(c_element).style=rectangle_article_righttop;
+        f=true;
+    }
 }
