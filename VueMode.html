@@ -3,19 +3,76 @@
     <head>
         <title>Mode</title>
         <meta charset = "UTF-8" />
-        <script src = "vue.js"></script>
-        <style>
-            .bg{width: 300px;height: 300px;margin: 1px;background-color: #AAADB1;border: 1px solid #666;float: left;}
-        </style>
     </head>
     <body>
-        <div class="bg"></div>
-        <div class="bg"></div>
-        <div class="bg"></div>
-        <div class="bg"></div>
-        <div class="bg"></div>
-        <div class="bg"></div>
-        <div class="bg"></div>
-        <div class="bg"></div>
+        <div id="rect-a" style="width: 0;height: 0;transition: ease 0.4s;float: left;" onclick="Deformation()"></div>
+        <div id="rect-b" style="width: 0;height: 0;transition: ease 0.4s;float: left;"></div>
+        <div id="rect-c" style="width: 0;height: 0;transition: ease 0.4s;float: left;"></div>
+        <div id="rect-d" style="width: 0;height: 0;transition: ease 0.4s;float: left;"></div>
+        <div id="rect-e" style="width: 0;height: 0;transition: ease 0.4s;float: left;"></div>
+        <script>
+            function Ds(c_object){
+                this.id="";
+                this.width=0;
+                this.height=0;
+                this.display="";
+                this.color="";
+                this.on_click=false;
+                this.on_click_big=0;
+                this.on_click_small=0;
+
+                this.text_width="width:";
+                this.text_height="height:";
+                this.text_px="px;";
+                this.text_display="display:";
+                this.text_color="background-color:";
+
+                if(c_object!==null){
+                    if(c_object.name!==null){
+                        this.id=c_object.name;
+                    }
+                    if(c_object.w!==null){
+                        this.width=c_object.w;
+                    }
+                    if(c_object.h!==null){
+                        this.height=c_object.h;
+                    }
+                    if(c_object.d!==null){
+                        this.display=c_object.d;
+                    }
+                    if(c_object.c!==null){
+                        this.color=c_object.c;
+                    }
+                    if(this.on_click===true){
+                        if(c_object.oc_b!==null){
+                            this.on_click_big=c_object.oc_b;
+                            this.width+=this.width*this.on_click_big;
+                            this.height+=this.height*this.on_click_big;
+                        }
+                        if(c_object.oc_s!==null){
+                            this.on_click_small=c_object.oc_s;
+                            this.width+=this.width*this.on_click_small;
+                            this.height+=this.height*this.on_click_small;
+                        }
+                    }
+                    document.getElementById(this.id).style=
+                        "transition: backward 0.4s cubic-bezier(.68,-0.55,.27,1.55) 0.4s;"+
+                        this.text_width+this.width+this.text_px+
+                        this.text_height+this.height+this.text_px+
+                        this.text_display+this.display+";"+
+                        this.text_color+this.color+";";
+                }
+            }
+            var ra = new Ds({
+                name:"rect-a",
+                w:100,
+                h:100,
+                c:"#afa",
+            });
+            function Deformation(){
+                    ra.on_click=true;
+                    ra.on_click_big=0.3;
+            }
+        </script>
     </body>
 </html>
